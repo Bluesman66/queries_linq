@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Queries.Ling;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +17,7 @@ namespace Queries
                 new Movie() { Title = "Start Wars V", Rating = 8.7f, Year = 1980 }
             };
 
-            var query = movies.Where(m => m.Year > 2000);
+            var query = movies.Filter(m => m.Year > 2000);
 
             foreach(var movie in query)
             {
