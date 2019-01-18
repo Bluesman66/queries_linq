@@ -17,9 +17,16 @@ namespace Queries
                 new Movie() { Title = "Start Wars V", Rating = 8.7f, Year = 1980 }
             };
 
+            //var query = movies.Where(m => m.Year > 2000);
+
+            //foreach (var movie in query)
+            //{
+            //    Console.WriteLine(movie.Title);
+            //}
+
             var query = movies.Filter(m => m.Year > 2000);
 
-            foreach(var movie in query)
+            foreach (var movie in query)
             {
                 Console.WriteLine(movie.Title);
             }
